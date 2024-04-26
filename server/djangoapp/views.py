@@ -33,6 +33,7 @@ def login_user(request):
     # Try to check if provide credential can be authenticated
     user = authenticate(username=username, password=password)
     data = {"username": username}
+    print(data)
     if user is not None:
         # If user is valid, call login method to login current user
         login(request, user)
